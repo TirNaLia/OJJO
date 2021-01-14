@@ -2,11 +2,62 @@
 <html lang="ru">
 <head>
     <title>OJJO</title>
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="#">Контрагентам</a></li>
+                        <li><a href="#">Дизайнерам</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </nav>
+                <div class="header-logo">
+                    <img src="IMG/header-logo.png" class="header-logo" alt="logo">
+                </div>
+                <div class="search">
+                    <form action="#">
+                        <button class="search-btn">
+                            <img src="IMG/search-icon.svg" alt="search-btn" class="search-icon">
+                        </button>
+                        <input type="text" name="search" placeholder="Поиск" class="search-input" required>
+                    </form>
+                </div>
+                <button onclick="show('block')" class="reg-button">Вход/Регистрация</button>
+            </div>
+            <div id="gray" onclick="show('none')"></div>
+            <div id="window">
+                <img src="IMG/close.png" width="15" height="15" onclick="show('none')" alt="" class="close-window">
+                <div class="form">
+                    <form action="">
+                        <h2 class="window-title">Вход</h2>
+                        <label for="email">Почта</label>
+                        <input type="text" name="email" class="email-input" required>
+                        <label for="password">Пароль</label>
+                        <input type="password" name="password" required>
+                        <button>Войти</button>
+                    </form>
+                </div>
+            </div>
+            <div class="header-promo">
+                <h1>Долго, дорого, богато!</h1>
+            </div>
+            <div class="header-btn">
+                <a href="#">каталог изделий</a>
+            </div>
+        </div>
+        <hr class="solid">
+        <img src="IMG/header-bottom.png" alt="" class="header-bottom">
+    </header>
+    <main></main>
+<script src="js/main.js"></script>
 </body>
 </html>
