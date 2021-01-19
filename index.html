@@ -32,18 +32,29 @@
                     </form>
                 </div>
                 <button onclick="show('block')" class="reg-button">Вход/Регистрация</button>
+                <div class="header-icons">
+                    <a href="#" class="profile-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="white"/>
+                    </svg></a>
+
+                    <a href="#" class="like-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.97342 4.59641C6.21857 0.341121 0.642853 2.65926 0.642853 7.29469C0.642853 10.7755 8.28685 16.2205 8.97342 16.9285C9.66471 16.2205 16.9286 10.7755 16.9286 7.29469C16.9286 2.69441 11.7334 0.341121 8.97342 4.59641Z" fill="white"/>
+                    </svg>
+                    </a>
+                </div>
             </div>
             <div id="gray" onclick="show('none')"></div>
             <div id="window">
                 <img src="IMG/close.png" width="15" height="15" onclick="show('none')" alt="" class="close-window">
-                <div class="form">
-                    <form action="">
+                <div class="window-overlay">
+                    <form action="#">
                         <h2 class="window-title">Вход</h2>
                         <label for="email">Почта</label>
                         <input type="text" name="email" class="email-input" required>
                         <label for="password">Пароль</label>
                         <input type="password" name="password" required>
                         <button>Войти</button>
+                        <a href="#">Зарегистрироваться</a>
                     </form>
                 </div>
             </div>
@@ -51,13 +62,48 @@
                 <h1>Долго, дорого, богато!</h1>
             </div>
             <div class="header-btn">
-                <a href="#">каталог изделий</a>
+                <a href="#" class="scroll-btn">каталог изделий</a>
             </div>
         </div>
         <hr class="solid">
         <img src="IMG/header-bottom.png" alt="" class="header-bottom">
     </header>
-    <main></main>
+    <main>
+        <section class="catalog-section">
+            <div class="container">
+                <p class="before-catalog-title">К мероприятиям</p>
+                <h2 class="catalog-title">Настоящая красота здесь!</h2>
+                <div class="shadow-border">
+                    <ul class="shadow-border-list">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                    </ul>
+                    <div class="catalog-list">
+                        <ul class="catalog-list-title">
+                            <li><button autofocus>СВАДЬБА</button></li>
+                            <li><button>МУЖУ</button></li>
+                            <li><button>ЖЕНЕ</button></li>
+                            <li><button>ПАРТНЕРУ</button></li>
+                            <li><button>КОЛЛЕКЦИИ</button></li>
+                            <li><button>РЕДКОСТЬ</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="catalog-list-images">
+                    <a href="#" class="rings"><img src="IMG/rings.png" alt=""></a>
+                    <a href="#" class="earrings"><img src="IMG/earrings.png" alt=""></a>
+                    <a href="#" class="pendants"><img src="IMG/pendants.png" alt=""></a>
+                    <a href="#" class="sleeve-links"><img src="IMG/sleeve links.png" alt=""></a>
+                    <a href="#" class="armlets"><img src="IMG/armlets.png" alt=""></a>
+                    <a href="#" class="watch"><img src="IMG/watch.png" alt=""></a>
+                </div>   
+            </div>
+        </section>
+    </main>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -10,14 +10,6 @@
     src: url(../Fonts/gilroy-medium.ttf);
 }
 
-.search-input:-webkit-autofill,
-.search-input:-webkit-autofill:hover,
-.search-input:-webkit-autofill:focus,
-.search-input:-webkit-autofill:active {
-    -webkit-text-fill-color: #fff;
-    transition: background-color 5000s ease-in-out 0s;
-}
-
 ::-webkit-input-placeholder { 
     color: #fff;
  }
@@ -46,8 +38,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
     margin: 0;
 }
+
+/* HEADER */
 
 header {
     padding-top: 25px;
@@ -105,6 +101,14 @@ header {
     background: none;
 }
 
+.search-input:-webkit-autofill,
+.search-input:-webkit-autofill:hover,
+.search-input:-webkit-autofill:focus,
+.search-input:-webkit-autofill:active {
+    -webkit-text-fill-color: #fff;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 .reg-button {
     font-size: 14px;
     line-height: 21px;
@@ -114,19 +118,28 @@ header {
     border: none;
 }
 
+.header-icons {
+    margin-left: 44px;
+}
+
+.profile-icon {
+    margin-right: 23px;
+}
+
 /* МОДАЛЬНОЕ ОКНО ВХОДА */
 
 #window {
     display: none;
     position: fixed;
-    top: 120px;
+    top: 0;
     right: 0;
-    left: 740px;
+    left:0;
     bottom: 0;
+    margin: 150px auto 0 auto;
     z-index: 150;
 
     width: 420px;
-    height: 300px;
+    max-height: 300px;
     background-color: #fff;
     border-radius: 15px;
 }
@@ -143,45 +156,54 @@ header {
 }
 
 .close-window {
-    margin-top: 15px;
-    margin-left: 385px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
     cursor: pointer;
 }
 
 .window-title {
     color: #000;
-    margin-bottom: 50px;
-}
-
-.form {
-    width: 300px;
-    padding-top: 25px;
-    margin: 0 auto;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.form label {
+.window-overlay {
+    width: 300px;
+    padding-top: 25px;
+    margin: 0 auto;
+}
+
+.window-overlay form {
+    display: flex;
+    flex-direction: column;
+}
+
+.window-overlay label {
     color: #000;
 }
 
-.form input {
+.window-overlay input {
     border: 1px solid #000;
+    padding: 3px;
     border-radius: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
-.email-input {
-    margin-left: 10px;
-}
-
-.form input:focus {
+.window-overlay input:focus {
     color: #000;
 }
 
-.form button {
+.window-overlay button {
     border-radius: 5px;
     padding: 5px 80px;
     cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.window-overlay a {
+    display: block;
+    text-align: center;
 }
 
 /* ----------------------- */
@@ -221,4 +243,190 @@ hr.solid {
     display: block;
     padding-top: 30px;
     margin: 0 auto;
+}
+
+/* CATALOG-SECTION */
+
+.catalog-section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+    background-color: #fff;
+    color: #000;
+}
+
+.before-catalog-title {
+    text-align: center;
+    font-size: 21px;
+    line-height: 29px;
+    margin-bottom: 15px;
+}
+
+.catalog-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 67px;
+}
+
+.shadow-border {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 55px;
+}
+
+.shadow-border-list,
+.catalog-list-title {
+    display: flex;
+}
+
+.shadow-border-list li {
+    height: 55px;
+    width: 165px;
+    border: 1px solid #D6D6D6;
+}
+
+.shadow-border-list li:nth-child(1) {
+    margin-left: 6px;
+    width: 159px;
+}
+
+.shadow-border-list li:not(:nth-child(6)) {
+    margin-right: 24px;
+}
+
+.catalog-list {
+    position: absolute;
+    top: -7px;
+    right: 6px;
+    z-index: 2;
+}
+
+.catalog-list-title button { 
+    border: 1px solid #D6D6D6;
+    color: #000;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background: none;
+    margin-right: 24px;
+    background-color: #fff;
+}
+
+.catalog-list-title li:nth-child(1) button {
+    padding: 17px 27px 17px 36px;
+}
+
+.catalog-list-title li:nth-child(1) button:focus {
+    margin-right: 19px;
+    padding: 20px 32px 20px 36px;
+}
+
+.catalog-list-title li:nth-child(2) button {
+    padding: 17px 52px 17px 52px;
+}
+
+.catalog-list-title li:nth-child(2) button:focus {
+    margin-right: 19px;
+    padding: 20px 57px 20px 52px;
+}
+
+.catalog-list-title li:nth-child(3) button {
+    padding: 17px 53px 17px 55px;
+}
+
+.catalog-list-title li:nth-child(3) button:focus {
+    margin-right: 19px;
+    padding: 20px 58px 20px 55px;
+}
+
+.catalog-list-title li:nth-child(4) button {
+    padding: 17px 30px 17px 32px;
+}
+
+.catalog-list-title li:nth-child(4) button:focus {
+    margin-right: 19px;
+    padding: 20px 35px 20px 32px;
+}
+
+.catalog-list-title li:nth-child(5) button {
+    padding: 17px 19px 17px 21px;
+}
+
+.catalog-list-title li:nth-child(5) button:focus{
+    margin-right: 19px;
+    padding: 20px 24px 20px 21px;
+}
+
+.catalog-list-title li:nth-child(6) button {
+    padding: 17px 26px 17px 30px;
+    margin-right: 0;
+}
+
+.catalog-list-title li:nth-child(6) button:focus {
+    margin-right: -5px;
+    padding: 20px 31px 20px 30px;
+}
+
+.catalog-list-title button:hover {
+    background-color: #333333;
+    color: #fff;
+}
+
+.catalog-list-title button:focus {
+    color: #fff;
+    border: 1px solid #333333;
+    background-color: #333333;
+    outline: none;
+}
+
+.catalog-list-images {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 280px 280px;
+    grid-gap: 30px;
+}
+
+.rings, .earrings, .pendants,
+.sleeve-links, .armlets, .watch {
+    position: relative;
+}
+
+.rings:after, .earrings:after, .pendants:after,
+.sleeve-links:after, .armlets:after, .watch:after {
+    position: absolute;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    letter-spacing: 2px;
+    bottom: 31px;
+}
+
+.rings:after {
+    content: "КОЛЬЦА";
+    left: 123px;
+}
+
+.earrings:after {
+    content: "СЕРЬГИ";
+    left: 128px;
+}
+
+.pendants:after {
+    content: "ПОДВЕСКИ";
+    left: 105px;
+}
+
+.sleeve-links:after {
+    content: "ЗАПОНКИ";
+    left: 114px;
+}
+
+.armlets:after {
+    content: "БРАСЛЕТЫ";
+    left: 109px;
+}
+
+.watch:after {
+    content: "ЧАСЫ";
+    left: 139px;
 }
