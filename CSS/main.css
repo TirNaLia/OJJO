@@ -379,54 +379,41 @@ hr.solid {
     outline: none;
 }
 
-.catalog-list-images {
+.catalog-list-links ul {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 280px 280px;
     grid-gap: 30px;
 }
 
-.rings, .earrings, .pendants,
-.sleeve-links, .armlets, .watch {
+.catalog-list-links li  {
+    display: inline-block;
     position: relative;
 }
 
-.rings:after, .earrings:after, .pendants:after,
-.sleeve-links:after, .armlets:after, .watch:after {
+.catalog-list-links img {
+    display: block;
+}
+
+.catalog-link {
+    opacity: 0;
     position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 221px;
+    color: #fff;
     font-size: 24px;
     line-height: 28px;
-    color: #fff;
     letter-spacing: 2px;
-    bottom: 31px;
+    -webkit-transition:all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
 }
 
-.rings:after {
-    content: "КОЛЬЦА";
-    left: 123px;
-}
-
-.earrings:after {
-    content: "СЕРЬГИ";
-    left: 128px;
-}
-
-.pendants:after {
-    content: "ПОДВЕСКИ";
-    left: 105px;
-}
-
-.sleeve-links:after {
-    content: "ЗАПОНКИ";
-    left: 114px;
-}
-
-.armlets:after {
-    content: "БРАСЛЕТЫ";
-    left: 109px;
-}
-
-.watch:after {
-    content: "ЧАСЫ";
-    left: 139px;
+.catalog-link:hover {
+    opacity: 1;
 }
